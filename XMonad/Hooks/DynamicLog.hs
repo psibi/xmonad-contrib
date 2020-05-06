@@ -277,7 +277,7 @@ dynamicLog = dynamicLogWithPP def
 -- | Format the current status using the supplied pretty-printing format,
 --   and write it to stdout.
 dynamicLogWithPP :: PP -> X ()
-dynamicLogWithPP pp = dynamicLogString pp >>= io . ppOutput pp
+dynamicLogWithPP pp = pure "hello world" >>= io . ppOutput pp
 
 -- | The same as 'dynamicLogWithPP', except it simply returns the status
 --   as a formatted string without actually printing it to stdout, to
